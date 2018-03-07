@@ -9,7 +9,7 @@ public class CallLib : ModuleRules
     {
         get { return ModuleDirectory; }
         //return Path.GetDirectoryName(RulesCompiler.GetModuleFilename(this.GetType().Name));
-
+    
     }
     private string ThirdPartyPath
     {
@@ -25,6 +25,9 @@ public class CallLib : ModuleRules
 
         PublicIncludePaths.Add(Path.Combine(ThirdPartyPath, "Includes"));
         PublicAdditionalLibraries.Add(Path.Combine(ThirdPartyPath, "Libs", "LibVS.lib"));
+        PublicDelayLoadDLLs.Add("TestDll.dll");
+        RuntimeDependencies.Add(new RuntimeDependency(Path.Combine(ThirdPartyPath, "TestDll.dll")));
+      
 
         // Uncomment if you are using Slate UI
         // PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });

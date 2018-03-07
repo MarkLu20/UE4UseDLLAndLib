@@ -45,12 +45,11 @@ void UCallLIbFunctions::TickComponent(float DeltaTime, ELevelTick TickType, FAct
 }
 int UCallLIbFunctions::LibTest(int a, int b)
 {
-	myclass *p;
-	//p = new myclass();
-	p = nullptr;
-	return	p->show(a,b);
-
+	/*myclass *p;
+	p = new myclass();
+	return p->show(a,b);*/
 	//return P->show(a, b);
+	return 0;
 
 
 }
